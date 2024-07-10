@@ -1,14 +1,15 @@
-pragma solidity ^0.4.17;
-// linter warnings (red underline) about pragma version can igonored!
+// SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.19;
 
 contract Inbox {
     string public message = "";
     
-    function Inbox(string initialMsg) public {
+    constructor(string memory initialMsg) {
         message = initialMsg;
     }
 
-    function setMessage(string newMsg) public {
+    function setMessage(string memory newMsg) public {
         message = newMsg;
     }   
 }
